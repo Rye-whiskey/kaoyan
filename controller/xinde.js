@@ -2,6 +2,8 @@ var mongoose=require('mongoose');
 
 var Xinde=mongoose.model('Xinde');
 
+var ObjectID = require('mongodb').ObjectID;
+
 exports.publish=function(req,res){
 	var username=req.body.username;
 	var title=req.body.title;
@@ -32,7 +34,7 @@ exports.search=function(req,res){
 			res.json({"status":"error","msg":"error_system"});
 		}else{
 			res.json(result);
-			console.log(result[0]);
+			
 		}
 	});
 }
@@ -58,3 +60,17 @@ exports.search_eng=function(req,res){
 		}
 	});
 }
+
+exports.search_comment=function(req,res){
+	var id=req.body.id;
+	Xinde.findOne({'_id':ObjectID(id)},{comments:1},function(err,result){
+		if(err){
+			res.json({"status":"error","msg":"error_system"});
+		}else{
+
+			res.json(result.get("comments"));
+			console.log(result.get("comments"));
+		}
+	});
+}
+

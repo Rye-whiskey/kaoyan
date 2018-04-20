@@ -7,6 +7,7 @@ var User=mongoose.model('User');
 exports.login=function(req,res){
 	var username=req.body.username;
 	var password=req.body.password;
+	
 
 	User.findOne({username:username},function(err,docs){
 		if(err){
@@ -36,7 +37,7 @@ exports.register=function(req,res){
 	var icon = req.body.image;
 	var username=req.body.username;
 	var dataBuffer = new Buffer(icon,'base64');
-	fs.writeFile('image/'+username+'.png',dataBuffer,function(err){
+	fs.writeFile('public/images/'+username+'.png',dataBuffer,function(err){
 		if(err){
 			
 		}else{

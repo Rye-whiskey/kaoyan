@@ -5,5 +5,6 @@ module.exports=function(){
 	var db=mongoose.connect(config.mongodb);
 	require('../model/user.js');
 	require('../model/xinde.js');
+
 	return db;
 }
