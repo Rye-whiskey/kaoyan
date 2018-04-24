@@ -4,6 +4,10 @@ var Xinde=require('../controller/xinde');
 
 var Comment=require('../controller/comment');
 
+var Vac = require('../controller/vac');
+
+var New = require('../controller/new');
+
 module.exports=function(app){
 	app.post('/login',User.login);
 	app.post('/register',User.register);
@@ -14,4 +18,6 @@ module.exports=function(app){
 	app.post('/search_eng',Xinde.search_eng);
 	app.post('/get_image',User.get_image);
 	app.post('/search_comment',Xinde.search_comment);
+	app.post('/vac',Vac.vac);
+	app.post('/new',New.new);
 };

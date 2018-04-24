@@ -28,6 +28,9 @@ exports.publish=function(req,res){
 }
 
 
+
+
+
 exports.search=function(req,res){
 	Xinde.find(function(err,result){
 		if(err){

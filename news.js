@@ -41,13 +41,5 @@ superagent.get(reptileUrl).end(function(err,res){
             likes_count: replaceText(_this.find('.ic-list-like').parent().text()) * 1
 		});
 	});
-	// 生成数据
-    // 写入数据, 文件不存在会自动创建
-    fs.writeFile('C:/data/article.json', JSON.stringify({
-        status: 0,
-        data: data
-    }), function (err) {
-       
-        console.log('写入完成');
-    });
+	
 });
