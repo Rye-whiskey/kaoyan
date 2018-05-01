@@ -6,13 +6,13 @@ var ObjectID = require('mongodb').ObjectID;
 
 exports.publish=function(req,res){
 	var username=req.body.username;
-	var wizhi=req.body.weizhi;
+	var weizhi=req.body.weizhi;
 	var ltime=req.body.ltime;
 
 	var newWeizhi = new Weizhi(
 			{
 				username:username,
-				wizhi:wizhi,
+				weizhi:wizhi,
 				ltime:ltime
 			}
 		);	
