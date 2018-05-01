@@ -12,7 +12,7 @@ exports.publish=function(req,res){
 	var newWeizhi = new Weizhi(
 			{
 				username:username,
-				weizhi:wizhi,
+				weizhi:weizhi,
 				ltime:ltime
 			}
 		);	
