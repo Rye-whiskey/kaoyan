@@ -7,5 +7,6 @@ module.exports=function(){
 	require('../model/xinde.js');
 	require('../model/vac.js');
 	require('../model/new.js');
+	require('../model/weizhi.js');
 	return db;
 }
