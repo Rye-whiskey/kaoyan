@@ -27,7 +27,16 @@ exports.publish=function(req,res){
 	});
 }
 
-
+exports.minexinde=function(req,res){
+	var username=req.body.username;
+	Xinde.find({'username':username},function(err,result){
+		if(err){
+			res.json({"status":"error","msg":"error_system"});
+		}else{
+			res.json(result);
+		}
+	});
+}
 
 
 
@@ -76,4 +85,18 @@ exports.search_comment=function(req,res){
 		}
 	});
 }
+
+exports.myxinde=function(req,res){
+	var username=req.body.username;
+	Xinde.find({'username':username},function(err,result){
+		if(err){
+			res.json({"status":"error","msg":"error_system"});
+		}else{
+			res.json(result);
+		}
+	});
+}
+
+
+
 

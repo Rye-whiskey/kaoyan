@@ -40,4 +40,13 @@ exports.search=function(req,res){
 	});
 }
 
-
+exports.myweizhi=function(req,res){
+	var username=req.body.username;
+	Weizhi.find({'username':username},function(err,result){
+		if(err){
+			res.json({"status":"error","msg":"error_system"});
+		}else{
+			res.json(result);
+		}
+	});
+}

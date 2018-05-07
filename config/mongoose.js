@@ -8,5 +8,8 @@ module.exports=function(){
 	require('../model/vac.js');
 	require('../model/new.js');
 	require('../model/weizhi.js');
+	require('../model/math.js');
+	require('../model/article.js');
+	require('../model/share.js');
 	return db;
 }
